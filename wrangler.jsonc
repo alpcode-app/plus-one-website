@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "plus-one-website",
+  "compatibility_date": "2026-10-19",
+  "observability": {
+    "enabled": true
+  },
+  // Statische Seite: alles aus diesem Ordner, außer was in .assetsignore steht
+  "assets": {
+    "directory": "."
+  }
+}
