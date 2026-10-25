@@ -105,7 +105,7 @@ if (form) {
       d.name,
       d.email,
     ].join('\n');
-    location.href = `mailto:keidlers@gmx.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    location.href = `mailto:plus.one.kempten@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
 
