@@ -4,11 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutz – +one</title>
-  <meta name="robots" content="noindex">
+  <meta name="description" content="Datenschutzerklärung der Band +one aus Kempten.">
   <link rel="icon" href="assets/img/favicon.jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/rubik-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,46 +19,254 @@
   </header>
   <div class="stripe" aria-hidden="true"></div>
 
-  <main class="page">
+  <main class="page legal">
     <div class="container narrow">
+      <p class="eyebrow">Rechtliches</p>
       <h1>Datenschutzerklärung</h1>
-      <p class="placeholder">
-        <strong>Platzhalter:</strong> Auf der alten Seite enthielt die Datenschutz-Seite keinen eigenen Text.
-        Hier muss vor dem Livegang eine vollständige Datenschutzerklärung eingefügt werden
-        (z.&nbsp;B. per Generator von e-recht24 oder datenschutz-generator.de) – inkl. Angaben zum Hoster
-        und zu Google Fonts (oder Fonts lokal einbinden).
+      <p class="legal__lead">
+        Kurz gesagt: Diese Webseite setzt <strong>keine Cookies</strong>, nutzt <strong>kein Tracking</strong>
+        und <strong>keine Analyse-Tools</strong>. Schriften, Bilder und Videos liegen auf unserem eigenen Webspace.
+        Personenbezogene Daten fallen nur an, weil eure Anfrage technisch über unseren Hoster läuft – und wenn ihr
+        uns freiwillig eine E-Mail schreibt. Die Details stehen unten.
       </p>
 
-      <h2>Verantwortlich</h2>
-      <p>Plus One Music Band<br>Kempten<br><a href="mailto:keidlers@gmx.de">keidlers@gmx.de</a></p>
+      <nav class="legal__toc" aria-label="Inhalt">
+        <ol>
+          <li><a href="#verantwortlich">Verantwortlicher</a></li>
+          <li><a href="#ueberblick">Überblick über die Verarbeitung</a></li>
+          <li><a href="#hosting">Hosting und Server-Protokolle (Cloudflare)</a></li>
+          <li><a href="#cookies">Cookies und Speicherung im Browser</a></li>
+          <li><a href="#schriften">Schriftarten und Medien</a></li>
+          <li><a href="#kontakt">Kontakt per E-Mail und Anfrageformular</a></li>
+          <li><a href="#links">Links zu anderen Webseiten</a></li>
+          <li><a href="#rechte">Eure Rechte</a></li>
+          <li><a href="#sonstiges">Sonstiges</a></li>
+        </ol>
+      </nav>
 
-      <!-- YouTube-Abschnitt ausgeblendet, solange die Live-Momente auf der Startseite ausgeblendet sind -->
-      <div hidden>
-      <h2 id="youtube">YouTube-Videos</h2>
-      <p>
-        Auf unserer Startseite binden wir Videos von YouTube ein. Anbieter ist die Google Ireland Limited,
-        Gordon House, Barrow Street, Dublin 4, Irland. Wir nutzen den erweiterten Datenschutzmodus
-        (youtube-nocookie.com) und eine Klick-zum-Laden-Lösung: Beim Aufruf unserer Seite wird
-        <strong>keine</strong> Verbindung zu YouTube aufgebaut, das Vorschaubild liegt auf unserem eigenen Server.
-      </p>
-      <p>
-        Erst wenn ihr auf „Abspielen“ klickt, wird das Video von YouTube geladen. Dabei werden u.&nbsp;a. eure
-        IP-Adresse und technische Daten an Google übermittelt, ggf. auch in die USA. Rechtsgrundlage ist eure
-        Einwilligung durch den Klick (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO, §&nbsp;25 Abs.&nbsp;1 TDDDG).
-        Mehr dazu in der Datenschutzerklärung von Google:
-        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
-      </p>
-      <p class="placeholder">
-        <strong>Hinweis:</strong> Dieser Abschnitt ist ein Entwurf, keine Rechtsberatung. Bitte gemeinsam mit der
-        vollständigen Datenschutzerklärung (Hosting bei Cloudflare, Google Fonts, Kontakt per E-Mail) prüfen.
-      </p>
-      </div>
+      <section id="verantwortlich">
+        <h2>1. Verantwortlicher</h2>
+        <p>Verantwortlich für die Datenverarbeitung auf dieser Webseite im Sinne der Datenschutz-Grundverordnung (DSGVO) ist:</p>
+        <address>
+          Plus One Music Band<br>
+          <span class="fill">[Vor- und Nachname der verantwortlichen Person]</span><br>
+          <span class="fill">[Straße und Hausnummer]</span><br>
+          <span class="fill">[PLZ]</span> Kempten<br>
+          E-Mail: <a href="mailto:keidlers@gmx.de">keidlers@gmx.de</a>
+        </address>
+        <p>Ein Datenschutzbeauftragter ist nicht bestellt, da hierzu keine gesetzliche Pflicht besteht.</p>
+      </section>
+
+      <section id="ueberblick">
+        <h2>2. Überblick über die Verarbeitung</h2>
+        <div class="legal__table">
+          <table>
+            <thead>
+              <tr><th>Was</th><th>Welche Daten</th><th>Rechtsgrundlage</th><th>Speicherdauer</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aufruf der Webseite (Hosting)</td>
+                <td>IP-Adresse, Datum/Uhrzeit, aufgerufene Datei, Browser-Angaben</td>
+                <td>Art. 6 Abs. 1 lit. f DSGVO</td>
+                <td>kurzfristig beim Hoster, siehe Abschnitt 3</td>
+              </tr>
+              <tr>
+                <td>E-Mail / Anfrage</td>
+                <td>Name, E-Mail-Adresse, Inhalt eurer Nachricht</td>
+                <td>Art. 6 Abs. 1 lit. b bzw. f DSGVO</td>
+                <td>bis die Anfrage erledigt ist, siehe Abschnitt 6</td>
+              </tr>
+              <tr>
+                <td>Cookies, Tracking, Analyse</td>
+                <td colspan="3">findet nicht statt</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="hosting">
+        <h2>3. Hosting und Server-Protokolle (Cloudflare)</h2>
+        <p>
+          Diese Webseite wird bei <strong>Cloudflare, Inc.</strong>, 101 Townsend St., San Francisco, CA 94107, USA,
+          gehostet und über deren weltweites Servernetz (Content Delivery Network) ausgeliefert. Wenn ihr die Seite
+          aufruft, verarbeitet Cloudflare technisch zwangsläufig folgende Daten:
+        </p>
+        <ul>
+          <li>eure IP-Adresse,</li>
+          <li>Datum und Uhrzeit des Abrufs,</li>
+          <li>die aufgerufene Seite bzw. Datei und die übertragene Datenmenge,</li>
+          <li>Browser-Typ, Betriebssystem und die zuvor besuchte Seite (Referrer), sofern euer Browser diese übermittelt.</li>
+        </ul>
+        <p>
+          <strong>Zweck:</strong> Die Daten werden benötigt, um euch die Webseite auszuliefern, die Stabilität und
+          Sicherheit des Angebots zu gewährleisten und Angriffe (z.&nbsp;B. Überlastungsangriffe) abzuwehren.
+          <strong>Rechtsgrundlage</strong> ist unser berechtigtes Interesse an einer sicheren und zuverlässigen
+          Bereitstellung der Webseite (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO).
+        </p>
+        <p>
+          Wir selbst speichern keine Zugriffsprotokolle: Die Protokollierung einzelner Aufrufe
+          (Logging) ist in unseren Einstellungen bei Cloudflare abgeschaltet. Cloudflare stellt uns lediglich
+          zusammengefasste Statistiken (z.&nbsp;B. Anzahl der Aufrufe) zur Verfügung, aus denen wir keine einzelnen
+          Besucherinnen und Besucher erkennen können. Cloudflare speichert die oben genannten Daten nur so lange, wie
+          es für die genannten Zwecke erforderlich ist.
+        </p>
+        <p>
+          Cloudflare verarbeitet die Daten in unserem Auftrag. Mit Cloudflare besteht ein Vertrag zur
+          Auftragsverarbeitung nach Art.&nbsp;28 DSGVO (Data Processing Addendum). Dabei kann eine Übermittlung in die
+          USA stattfinden. Cloudflare ist nach dem <em>EU-U.S. Data Privacy Framework</em> zertifiziert; für die
+          Übermittlung besteht damit ein Angemessenheitsbeschluss der EU-Kommission (Art.&nbsp;45 DSGVO). Ergänzend
+          hat Cloudflare die EU-Standardvertragsklauseln vereinbart (Art.&nbsp;46 Abs.&nbsp;2 lit.&nbsp;c DSGVO).
+        </p>
+        <p>
+          Weitere Informationen:
+          <a href="https://www.cloudflare.com/de-de/privacypolicy/" target="_blank" rel="noopener">Datenschutzerklärung von Cloudflare</a>.
+        </p>
+        <p>
+          <strong>Verschlüsselung:</strong> Die Verbindung zu dieser Webseite ist per TLS (erkennbar an „https://“ und
+          dem Schloss-Symbol im Browser) verschlüsselt, damit Dritte die übertragenen Daten nicht mitlesen können.
+        </p>
+      </section>
+
+      <section id="cookies">
+        <h2>4. Cookies und Speicherung im Browser</h2>
+        <p>
+          Diese Webseite setzt <strong>keine Cookies</strong> und speichert auch sonst keine Informationen auf eurem
+          Gerät (kein Local Storage, kein Fingerprinting). Es werden keine Analyse-, Tracking- oder Werbedienste und
+          keine Social-Media-Plugins eingesetzt. Ein Cookie-Banner ist deshalb nicht erforderlich.
+        </p>
+        <p>
+          Nur für den Fall, dass Cloudflare einen ungewöhnlichen Zugriff als möglichen Angriff einstuft, kann Cloudflare
+          eine Sicherheitsprüfung einblenden und dabei ein technisch notwendiges Sicherheits-Cookie setzen. Rechtsgrundlage
+          ist dann §&nbsp;25 Abs.&nbsp;2 Nr.&nbsp;2 TDDDG in Verbindung mit Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO.
+        </p>
+      </section>
+
+      <section id="schriften">
+        <h2>5. Schriftarten und Medien</h2>
+        <p>
+          Die verwendeten Schriftarten (Rubik und Inter) sind <strong>lokal</strong> auf unserem Webspace gespeichert.
+          Beim Aufruf der Seite wird <strong>keine Verbindung zu Google</strong> oder anderen Schriftanbietern
+          aufgebaut. Gleiches gilt für alle Fotos und Videos auf dieser Seite, einschließlich des Hintergrundvideos
+          im Startbereich: Sie werden ausschließlich von unserem eigenen Webspace geladen.
+        </p>
+      </section>
+
+      <section id="kontakt">
+        <h2>6. Kontakt per E-Mail und Anfrageformular</h2>
+        <p>
+          Ihr könnt uns per E-Mail an <a href="mailto:keidlers@gmx.de">keidlers@gmx.de</a> erreichen. Das
+          Anfrageformular auf unserer Startseite <strong>sendet selbst keine Daten</strong> an uns oder an einen
+          Server: Es öffnet lediglich euer eigenes E-Mail-Programm mit einer vorausgefüllten Nachricht. Erst wenn ihr
+          diese E-Mail selbst abschickt, erhalten wir die von euch eingegebenen Daten (z.&nbsp;B. Name, E-Mail-Adresse,
+          Anlass, Datum, Ort und Nachricht).
+        </p>
+        <p>
+          Wir verwenden diese Daten ausschließlich, um eure Anfrage zu beantworten und ggf. einen Auftritt zu planen.
+          <strong>Rechtsgrundlage</strong> ist Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO, wenn eure Anfrage auf einen
+          Vertrag (z.&nbsp;B. eine Buchung) abzielt, ansonsten unser berechtigtes Interesse an der Beantwortung von
+          Anfragen (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Eine Weitergabe an Dritte findet nicht statt.
+        </p>
+        <p>
+          Wir löschen die Daten, sobald die Anfrage abschließend bearbeitet ist und sie nicht mehr benötigt werden.
+          Kommt eine Buchung zustande, bewahren wir die dafür nötigen Unterlagen so lange auf, wie gesetzliche
+          Aufbewahrungspflichten (insbesondere steuer- und handelsrechtliche Fristen von bis zu zehn Jahren) es
+          verlangen.
+        </p>
+        <p>
+          Für unser E-Mail-Postfach nutzen wir den Dienst GMX der 1&amp;1 Mail &amp; Media GmbH, Brauerstraße 48,
+          76135 Karlsruhe. Eure E-Mails werden dort auf Servern in Deutschland gespeichert. Bitte beachtet, dass
+          E-Mails auf dem Transportweg je nach eurem eigenen Anbieter nicht immer durchgehend verschlüsselt sind.
+        </p>
+      </section>
+
+      <section id="links">
+        <h2>7. Links zu anderen Webseiten</h2>
+        <p>
+          Unsere Seite enthält einfache Links, z.&nbsp;B. zu unserem YouTube-Kanal. Dabei handelt es sich um normale
+          Verweise, keine eingebetteten Inhalte: Daten werden an den jeweiligen Anbieter erst übertragen, wenn ihr einen
+          Link anklickt und dessen Seite öffnet. Für die Datenverarbeitung dort ist der jeweilige Anbieter
+          verantwortlich.
+        </p>
+      </section>
+
+      <!-- YouTube-Einbindung: wieder einblenden (hidden entfernen), sobald die "Live-Momente" auf der Startseite aktiv sind,
+           und im Inhaltsverzeichnis sowie in der Überblickstabelle ergänzen. -->
+      <section id="youtube" hidden>
+        <h2>YouTube-Videos (Klick-zum-Laden)</h2>
+        <p>
+          Auf unserer Startseite binden wir Videos von YouTube ein. Anbieter ist die Google Ireland Limited,
+          Gordon House, Barrow Street, Dublin 4, Irland. Wir nutzen den erweiterten Datenschutzmodus
+          (youtube-nocookie.com) und eine Klick-zum-Laden-Lösung: Beim Aufruf unserer Seite wird
+          <strong>keine</strong> Verbindung zu YouTube aufgebaut, das Vorschaubild liegt auf unserem eigenen Webspace.
+        </p>
+        <p>
+          Erst wenn ihr auf „Abspielen“ klickt, wird das Video von YouTube geladen. Dabei werden u.&nbsp;a. eure
+          IP-Adresse und technische Angaben zu eurem Gerät an Google übermittelt; YouTube kann dabei Cookies oder
+          ähnliche Technologien einsetzen. Eine Übermittlung in die USA ist möglich; Google ist nach dem
+          EU-U.S. Data Privacy Framework zertifiziert (Art.&nbsp;45 DSGVO). Rechtsgrundlage ist eure Einwilligung durch
+          den Klick (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO, §&nbsp;25 Abs.&nbsp;1 TDDDG). Ihr könnt sie jederzeit für
+          die Zukunft widerrufen, indem ihr die Seite neu ladet und kein Video mehr startet.
+          Mehr dazu: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.
+        </p>
+      </section>
+
+      <section id="rechte">
+        <h2>8. Eure Rechte</h2>
+        <p>Ihr habt gegenüber uns jederzeit folgende Rechte bezüglich eurer personenbezogenen Daten:</p>
+        <ul>
+          <li><strong>Auskunft</strong> darüber, ob und welche Daten wir über euch verarbeiten (Art.&nbsp;15 DSGVO),</li>
+          <li><strong>Berichtigung</strong> unrichtiger Daten (Art.&nbsp;16 DSGVO),</li>
+          <li><strong>Löschung</strong> eurer Daten (Art.&nbsp;17 DSGVO),</li>
+          <li><strong>Einschränkung</strong> der Verarbeitung (Art.&nbsp;18 DSGVO),</li>
+          <li><strong>Datenübertragbarkeit</strong> (Art.&nbsp;20 DSGVO),</li>
+          <li><strong>Widerruf</strong> einer erteilten Einwilligung mit Wirkung für die Zukunft (Art.&nbsp;7 Abs.&nbsp;3 DSGVO).</li>
+        </ul>
+        <div class="legal__box">
+          <h3>Widerspruchsrecht (Art. 21 DSGVO)</h3>
+          <p>
+            Soweit wir eure Daten auf Grundlage berechtigter Interessen (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO)
+            verarbeiten, könnt ihr dieser Verarbeitung aus Gründen, die sich aus eurer besonderen Situation ergeben,
+            jederzeit widersprechen. Wir verarbeiten eure Daten dann nicht mehr, es sei denn, wir können zwingende
+            schutzwürdige Gründe nachweisen, die eure Interessen überwiegen, oder die Verarbeitung dient der
+            Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.
+          </p>
+        </div>
+        <p>
+          Für alle Anliegen genügt eine formlose E-Mail an <a href="mailto:keidlers@gmx.de">keidlers@gmx.de</a>.
+        </p>
+        <p>
+          <strong>Beschwerderecht:</strong> Ihr habt außerdem das Recht, euch bei einer Datenschutz-Aufsichtsbehörde
+          zu beschweren (Art.&nbsp;77 DSGVO). Für uns zuständig ist das
+          Bayerische Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach,
+          <a href="https://www.lda.bayern.de" target="_blank" rel="noopener">www.lda.bayern.de</a>.
+        </p>
+      </section>
+
+      <section id="sonstiges">
+        <h2>9. Sonstiges</h2>
+        <p>
+          <strong>Keine Pflicht zur Bereitstellung:</strong> Ihr seid nicht verpflichtet, uns personenbezogene Daten
+          mitzuteilen. Ohne die technisch notwendigen Verbindungsdaten (Abschnitt&nbsp;3) kann die Webseite allerdings
+          nicht angezeigt werden, und ohne Kontaktdaten können wir eure Anfrage nicht beantworten.
+        </p>
+        <p>
+          <strong>Keine automatisierte Entscheidungsfindung:</strong> Wir setzen keine automatisierte
+          Entscheidungsfindung oder Profiling im Sinne von Art.&nbsp;22 DSGVO ein.
+        </p>
+        <p>
+          <strong>Änderungen:</strong> Wir passen diese Datenschutzerklärung an, wenn sich unsere Webseite oder die
+          rechtlichen Vorgaben ändern. Es gilt die jeweils hier veröffentlichte Fassung.
+        </p>
+        <p class="legal__date">Stand: Oktober 2026</p>
+      </section>
     </div>
   </main>
 
   <div class="stripe" aria-hidden="true"></div>
   <footer class="footer">
-    <p class="footer__copy">© 2026 +one · Kempten</p>
+    <p class="footer__copy">© 2026 +one · Kempten · <a href="index.html">Startseite</a></p>
   </footer>
 </body>
 </html>

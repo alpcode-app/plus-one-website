@@ -2,8 +2,9 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "plus-one-website",
   "compatibility_date": "2026-10-19",
+  // Keine Request-Logs speichern (Datensparsamkeit, siehe datenschutz.html)
   "observability": {
-    "enabled": true
+    "enabled": false
   },
   // Statische Seite: alles aus diesem Ordner, außer was in .assetsignore steht
   "assets": {

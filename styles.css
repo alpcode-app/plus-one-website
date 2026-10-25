@@ -350,6 +350,32 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 /* Unterseiten */
 .page { padding: clamp(48px, 8vw, 96px) 0; }
 .page h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; }
+/* Rechtliche Seiten */
+.legal h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 700; margin-top: 2.6rem; scroll-margin-top: 96px; }
+.legal h3 { font-size: 1.05rem; }
+.legal p, .legal li, .legal address { color: #3a3630; }
+.legal ul { padding-left: 1.2em; }
+.legal li { margin-bottom: .35em; }
+.legal address { font-style: normal; line-height: 1.8; margin: 0 0 1em; }
+.legal a { color: var(--pink); }
+.legal__lead { font-size: 1.1rem; background: #fff; border: 2px solid var(--ink); border-radius: var(--radius); padding: 18px 22px; box-shadow: 5px 5px 0 var(--green); }
+.legal__toc { background: var(--paper-2); border-radius: var(--radius); padding: 16px 22px; margin: 2rem 0; }
+.legal__toc ol { margin: 0; padding-left: 1.3em; columns: 2; column-gap: 32px; }
+.legal__toc li { break-inside: avoid; margin: 0 0 .3em; }
+.legal__toc a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.legal__toc a:hover { color: var(--pink); text-decoration: underline; }
+.legal__table { overflow-x: auto; border: 2px solid var(--ink); border-radius: 14px; background: #fff; }
+.legal table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .92rem; }
+.legal th, .legal td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--paper-2); }
+.legal th { font-family: var(--font-head); background: var(--paper-2); }
+.legal tr:last-child td { border-bottom: 0; }
+.legal__box { background: #fff; border-left: 6px solid var(--purple); border-radius: 10px; padding: 14px 20px; margin: 1.2rem 0; }
+.legal__box p { margin: 0; }
+.legal__date { color: var(--muted); font-size: .9rem; margin-top: 2rem; }
+.fill { background: #fff1a8; outline: 1px dashed var(--orange); border-radius: 4px; padding: 0 4px; }
+.footer__copy a { color: #bbb; }
+@media (max-width: 560px) { .legal__toc ol { columns: 1; } }
+
 .placeholder {
   background: #fff4cc; border: 2px dashed var(--orange); border-radius: 12px; padding: 16px 20px;
 }

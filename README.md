@@ -53,6 +53,5 @@ ffmpeg -i input.mp4 -vf scale=-2:720 -c:v libx264 -preset slow -crf 27 -maxrate 
 
 - **Events:** stehen direkt in `index.html` (Abschnitt `id="live"`) – neue Termine als weiteres `<li class="gig">` ergänzen.
 - **Social Links:** Instagram und Facebook waren auf der alten Seite leer (`#`) – echte Links in `index.html` eintragen.
-- **Impressum/Datenschutz:** Impressum braucht laut § 5 DDG Name und ladungsfähige Anschrift; Datenschutzerklärung fehlt noch komplett (`datenschutz.html`).
-- **Google Fonts:** für DSGVO besser lokal einbinden (z. B. via google-webfonts-helper).
+- **Impressum/Datenschutz:** Datenschutzerklärung ist fertig (`datenschutz.html`), es fehlen nur Name und Anschrift (gelb markiert). Dieselben Angaben braucht das Impressum (§ 5 DDG). Bei Änderungen an der Seite (neue Dienste, YouTube einblenden) die Datenschutzerklärung mitziehen.
 - **Bilder:** für schnellere Ladezeit nach WebP konvertieren / verkleinern (aktuell ~4,5 MB gesamt).
