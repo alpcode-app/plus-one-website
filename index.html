@@ -35,6 +35,12 @@
     <section class="hero">
       <div class="hero__media">
         <img src="assets/img/band-garten.jpg" alt="Die Band +one bei einem Gartenkonzert" fetchpriority="high">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-loop.jpg" aria-hidden="true">
+          <source src="assets/video/hero-loop.mp4" type="video/mp4">
+        </video>
+        <button class="hero__pause" type="button" aria-label="Hintergrundvideo pausieren" hidden>
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path class="i-pause" d="M7 5h4v14H7zM13 5h4v14h-4z"/><path class="i-play" d="M8 5v14l11-7z"/></svg>
+        </button>
       </div>
       <div class="hero__content">
         <p class="eyebrow">Plus One · aus Kempten</p>
@@ -143,27 +149,42 @@
       <div class="container">
         <p class="eyebrow">Reinhören</p>
         <h2>Live-Momente</h2>
+        <!-- Videos: data-yt = YouTube-ID (lädt erst nach Klick über youtube-nocookie.com).
+             Ist data-yt leer, wird das lokale Video aus data-src abgespielt. -->
+        <div class="video-feature">
+          <figure>
+            <div class="yt" data-yt="ZmHRyiDK9Ug" data-src="" data-title="+ONE – Promovideo 2026">
+              <img src="assets/video/promo-2026.jpg" alt="" loading="lazy">
+              <button class="yt__play" type="button" aria-label="Video abspielen: +ONE – Promovideo 2026"><svg viewBox="0 0 68 48" aria-hidden="true"><path class="yt__bg" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z"/><path fill="#fff" d="M27 34V14l18 10z"/></svg></button>
+            </div>
+            <figcaption><strong>Promovideo 2026</strong></figcaption>
+          </figure>
+        </div>
         <div class="video-grid">
           <figure>
-            <video controls preload="none" playsinline poster="assets/video/solo-1.jpg">
-              <source src="assets/video/solo-1.mp4" type="video/mp4">
-            </video>
+            <div class="yt" data-yt="" data-src="assets/video/solo-1.mp4" data-title="Solo I – Saxophon">
+              <img src="assets/video/solo-1.jpg" alt="" loading="lazy">
+              <button class="yt__play" type="button" aria-label="Video abspielen: Solo I – Saxophon"><svg viewBox="0 0 68 48" aria-hidden="true"><path class="yt__bg" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z"/><path fill="#fff" d="M27 34V14l18 10z"/></svg></button>
+            </div>
             <figcaption>Solo I · Saxophon</figcaption>
           </figure>
           <figure>
-            <video controls preload="none" playsinline poster="assets/video/solo-2.jpg">
-              <source src="assets/video/solo-2.mp4" type="video/mp4">
-            </video>
+            <div class="yt" data-yt="" data-src="assets/video/solo-2.mp4" data-title="Solo II – Gitarre">
+              <img src="assets/video/solo-2.jpg" alt="" loading="lazy">
+              <button class="yt__play" type="button" aria-label="Video abspielen: Solo II – Gitarre"><svg viewBox="0 0 68 48" aria-hidden="true"><path class="yt__bg" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z"/><path fill="#fff" d="M27 34V14l18 10z"/></svg></button>
+            </div>
             <figcaption>Solo II · Gitarre</figcaption>
           </figure>
           <figure>
-            <video controls preload="none" playsinline poster="assets/video/solo-3.jpg">
-              <source src="assets/video/solo-3.mp4" type="video/mp4">
-            </video>
+            <div class="yt" data-yt="" data-src="assets/video/solo-3.mp4" data-title="Solo III – Gartenkonzert">
+              <img src="assets/video/solo-3.jpg" alt="" loading="lazy">
+              <button class="yt__play" type="button" aria-label="Video abspielen: Solo III – Gartenkonzert"><svg viewBox="0 0 68 48" aria-hidden="true"><path class="yt__bg" d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.3 34 .3 34 .3S12.8.3 7.5 1.7a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.8 47.7 34 47.7 34 47.7s21.2 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z"/><path fill="#fff" d="M27 34V14l18 10z"/></svg></button>
+            </div>
             <figcaption>Solo III · Gartenkonzert</figcaption>
           </figure>
         </div>
-        <a class="btn btn--ghost" href="https://youtube.com/watch?v=ZmHRyiDK9Ug" target="_blank" rel="noopener">Mehr auf YouTube ↗</a>
+        <p class="yt-note">Beim Klick auf ein YouTube-Video wird eine Verbindung zu YouTube (Google) hergestellt – vorher nicht. <a href="datenschutz.html#youtube">Mehr zum Datenschutz</a></p>
+        <a class="btn btn--ghost" href="https://www.youtube.com/@ONE-e7e6l" target="_blank" rel="noopener">Unser YouTube-Kanal ↗</a>
       </div>
     </section>
 
@@ -236,7 +257,7 @@
       <div>
         <h4>Soziale Netzwerke</h4>
         <ul class="social">
-          <li><a href="https://youtube.com/watch?v=ZmHRyiDK9Ug" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.youtube.com/@ONE-e7e6l" target="_blank" rel="noopener">YouTube</a></li>
           <li><a href="#" aria-disabled="true" title="Link fehlt noch">Instagram</a></li>
           <li><a href="#" aria-disabled="true" title="Link fehlt noch">Facebook</a></li>
         </ul>

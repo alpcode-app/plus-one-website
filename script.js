@@ -31,6 +31,51 @@ if (lightbox) {
   lightbox.addEventListener('click', () => lightbox.close());
 }
 
+// Hero-Loop: bei "Bewegung reduzieren" gar nicht laden, sonst Pause-Button anbieten
+const heroVideo = document.querySelector('.hero__video');
+const heroPause = document.querySelector('.hero__pause');
+if (heroVideo) {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    heroVideo.removeAttribute('autoplay');
+    heroVideo.preload = 'none';
+    heroVideo.pause();
+  } else {
+    heroPause.hidden = false;
+    heroPause.addEventListener('click', () => {
+      const paused = !heroVideo.paused;
+      paused ? heroVideo.pause() : heroVideo.play();
+      heroPause.classList.toggle('is-paused', paused);
+      heroPause.setAttribute('aria-label', paused ? 'Hintergrundvideo abspielen' : 'Hintergrundvideo pausieren');
+    });
+  }
+}
+
+// Videos: Klick-zum-Laden. YouTube (youtube-nocookie) wird erst nach dem Klick kontaktiert.
+document.querySelectorAll('.yt').forEach((box) =>
+  box.querySelector('.yt__play').addEventListener('click', () => {
+    const { yt, src, title } = box.dataset;
+    let player;
+    if (yt) {
+      player = document.createElement('iframe');
+      player.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(yt)}?autoplay=1&rel=0&playsinline=1`;
+      player.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      player.allowFullscreen = true;
+      player.referrerPolicy = 'strict-origin-when-cross-origin';
+    } else {
+      player = document.createElement('video');
+      player.src = src;
+      player.controls = true;
+      player.autoplay = true;
+      player.playsInline = true;
+    }
+    player.title = title;
+    box.replaceChildren(player);
+    box.classList.add('is-playing');
+    // andere laufende lokale Videos anhalten
+    document.querySelectorAll('.yt video').forEach((v) => v !== player && v.pause());
+  })
+);
+
 // Buchungsformular -> vorausgefüllte E-Mail
 const form = document.getElementById('booking-form');
 if (form) {
