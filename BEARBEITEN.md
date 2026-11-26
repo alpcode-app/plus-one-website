@@ -52,3 +52,39 @@ git clone https://github.com/alpcode-app/plus-one-website.git
 cd plus-one-website
 npx http-server@14.1.1 -p 8080 .
 ```
+
+## Interner Bandbereich (/band/)
+
+Adresse: https://plus-one-kempten.de/band/ – Login pro Bandmitglied (Browser-Dialog).
+
+| Teil | Wo |
+|---|---|
+| Programm (Login, Notizen, Audio) | `src/band-worker.js` – läuft nur für `/band*` |
+| Oberfläche | `band/index.html`, `band/app.js`, `band/style.css` |
+| Songdaten (`songs.json`, Vorlagen) und Audio | Cloudflare **Workers KV** `plus-one-band-files` – **nicht** im Repo |
+| Notizen der Band | Cloudflare **D1** `plus-one-band` (Tabelle `notes`) |
+| Zugänge | Cloudflare-Secret `BAND_ACCOUNTS` (nur Passwort-Hashes) |
+
+Die Quelldateien (Audio, `songs.json`, Kontoverwaltung) liegen lokal in `PlusOne_Bandbereich/` und sind
+per `.gitignore`/`.assetsignore` ausgeschlossen. Für die folgenden Befehle einmal `npx wrangler login` ausführen.
+
+**Bandmitglied hinzufügen** (im Ordner `PlusOne_Bandbereich`, PowerShell):
+
+```powershell
+$env:BAND_DATA_DIR="$PWD\data-live"; node accounts.mjs add <login> "<Anzeigename>" <Stimme>
+```
+
+Das Passwort wird einmal angezeigt – einzeln und privat weitergeben. Danach die Konten hochladen (im Webseiten-Ordner):
+
+```powershell
+Get-Content PlusOne_Bandbereich\data-live\accounts.json -Raw | npx wrangler secret put BAND_ACCOUNTS
+```
+
+**Songdaten oder Audio aktualisieren:**
+
+```powershell
+npx wrangler kv key put --binding BAND_FILES --remote songs.json --path PlusOne_Bandbereich\private\songs.json
+npx wrangler kv key put --binding BAND_FILES --remote audio/move.mp3 --path PlusOne_Bandbereich\private\audio\move.mp3
+```
+
+**Notizen sichern:** `npx wrangler d1 export plus-one-band --remote --output notizen-backup.sql`
