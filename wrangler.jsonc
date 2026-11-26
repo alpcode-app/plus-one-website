@@ -6,8 +6,21 @@
   "observability": {
     "enabled": false
   },
-  // Statische Seite: alles aus diesem Ordner, außer was in .assetsignore steht
+  // Kleiner Worker nur für den internen Bandbereich unter /band/
+  "main": "src/band-worker.js",
+  // Statische Seite: alles aus diesem Ordner, außer was in .assetsignore steht.
+  // Nur /band und /band/* laufen zuerst durch den Worker (Login), alles andere direkt.
   "assets": {
-    "directory": "."
-  }
+    "directory": ".",
+    "binding": "ASSETS",
+    "run_worker_first": ["/band", "/band/*"]
+  },
+  // Privater Speicher für Songdaten und Audio des Bandbereichs (nicht im Git-Repo)
+  "kv_namespaces": [
+    { "binding": "BAND_FILES", "id": "93d8cd6587634c15ad75532b95fbaee6" }
+  ],
+  // Gemeinsame Ensemble-Notizen
+  "d1_databases": [
+    { "binding": "BAND_DB", "database_name": "plus-one-band", "database_id": "9a76f380-d3cc-4062-a514-78f9baf25eac" }
+  ]
 }

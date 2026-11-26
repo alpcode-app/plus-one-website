@@ -8,3 +8,9 @@ wrangler.jsonc
 wrangler.toml
 README.md
 BEARBEITEN.md
+src
+db
+.wrangler
+.dev.vars
+PlusOne_Bandbereich
+WhatsApp*

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bandbereich | +one</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt</a>
+<header class="top">
+  <div class="shell top-inner">
+    <a class="brand" href="https://www.plus-one-kempten.de/" aria-label="+one Startseite"><span>+</span>one</a>
+    <nav aria-label="Bandbereich"><a href="#ensemble">Ensemble</a><a href="#player">Player</a></nav>
+    <span class="member" id="member"></span>
+  </div>
+</header>
+<main class="shell" id="main">
+  <section class="hero" aria-labelledby="title">
+    <div><p class="kicker">PLUS ONE · BANDINTERN</p><h1 id="title">Eigene Songs</h1></div>
+    <nav class="songs" id="songs" aria-label="Song auswählen"></nav>
+  </section>
+  <p id="startup" class="status" role="status">Bandbereich wird geladen …</p>
+  <div class="workspace" id="workspace" hidden>
+    <section class="ensemble" id="ensemble" aria-labelledby="ensemble-title">
+      <div class="panel-top">
+        <div>
+          <h2 id="ensemble-title">Ensemble</h2>
+          <p class="context" id="song-name"></p>
+        </div>
+        <button class="primary" type="button" id="save" disabled>Änderungen speichern</button>
+      </div>
+      <div class="toolbar">
+        <div class="roles" id="roles" aria-label="Stimme auswählen"></div>
+        <button type="button" class="plain" id="reload">Stand abrufen</button>
+      </div>
+      <p class="status" id="edit-status" role="status"></p>
+      <div class="conflicts" id="conflicts" hidden></div>
+      <div class="table-scroll" tabindex="0" aria-label="Ensemble-Tabelle">
+        <table id="cues"></table>
+      </div>
+    </section>
+    <aside class="player" id="player" aria-labelledby="player-title">
+      <h2 id="player-title">Übungsplayer</h2>
+      <p class="track-meta" id="track-meta"></p>
+      <div class="current">
+        <p class="kicker">AKTUELLER ABSCHNITT</p>
+        <h3 id="current" aria-live="polite"></h3>
+        <p id="next"></p>
+        <p class="chords" id="chords"></p>
+        <p class="cue" id="cue"></p>
+      </div>
+      <audio id="audio" preload="metadata"></audio>
+      <input id="seek" type="range" min="0" step="0.01" value="0" aria-label="Wiedergabeposition">
+      <div class="time"><span id="elapsed">00:00</span><span id="duration"></span></div>
+      <div class="transport">
+        <button type="button" id="back" aria-label="Vorheriger Abschnitt">Zurück</button>
+        <button type="button" id="play">Abspielen</button>
+        <button type="button" id="forward" aria-label="Nächster Abschnitt">Weiter</button>
+      </div>
+      <div class="options">
+        <button type="button" id="loop" aria-pressed="false">Abschnitt wiederholen</button>
+        <label>Tempo <select id="speed"><option value="1">100 %</option><option value=".9">90 %</option><option value=".75">75 %</option><option value=".6">60 %</option></select></label>
+      </div>
+      <p class="status" id="audio-status" role="status"></p>
+    </aside>
+  </div>
+</main>
+<footer class="shell footer"><a href="https://www.plus-one-kempten.de/">+one · Kempten</a></footer>
+</body>
+</html>

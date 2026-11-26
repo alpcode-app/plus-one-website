@@ -6,3 +6,5 @@ node_modules/
 
 # Bandbereich: privat (MP3s, Konten) – darf nie ins öffentliche Webseiten-Repo
 PlusOne_Bandbereich/
+.wrangler/
+.dev.vars
