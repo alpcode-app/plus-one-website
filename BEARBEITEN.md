@@ -55,7 +55,7 @@ npx http-server@14.1.1 -p 8080 .
 
 ## Interner Bandbereich (/band/)
 
-Adresse: https://plus-one-kempten.de/band/ – Login pro Bandmitglied (Browser-Dialog).
+Adresse: https://plus-one-kempten.de/band/ – **ein gemeinsamer Zugang** für die ganze Band (Benutzer `plusone`, Browser-Dialog).
 
 | Teil | Wo |
 |---|---|
@@ -63,21 +63,21 @@ Adresse: https://plus-one-kempten.de/band/ – Login pro Bandmitglied (Browser-D
 | Oberfläche | `band/index.html`, `band/app.js`, `band/style.css` |
 | Songdaten (`songs.json`, Vorlagen) und Audio | Cloudflare **Workers KV** `plus-one-band-files` – **nicht** im Repo |
 | Notizen der Band | Cloudflare **D1** `plus-one-band` (Tabelle `notes`) |
-| Zugänge | Cloudflare-Secret `BAND_ACCOUNTS` (nur Passwort-Hashes) |
+| Zugang | Cloudflare-Secret `BAND_ACCOUNTS` (nur der Passwort-Hash) |
 
 Die Quelldateien (Audio, `songs.json`, Kontoverwaltung) liegen lokal in `PlusOne_Bandbereich/` und sind
 per `.gitignore`/`.assetsignore` ausgeschlossen. Für die folgenden Befehle einmal `npx wrangler login` ausführen.
 
-**Bandmitglied hinzufügen** (im Ordner `PlusOne_Bandbereich`, PowerShell):
+**Passwort ändern** (z. B. wenn jemand die Band verlässt), im Ordner `PlusOne_Bandbereich`, PowerShell:
 
 ```powershell
-$env:BAND_DATA_DIR="$PWD\data-live"; node accounts.mjs add <login> "<Anzeigename>" <Stimme>
+$env:BAND_DATA_DIR="$PWD\data-live"; node accounts.mjs add plusone "+ONE Band"
 ```
 
-Das Passwort wird einmal angezeigt – einzeln und privat weitergeben. Danach die Konten hochladen (im Webseiten-Ordner):
+Das neue Passwort wird einmal angezeigt – an die Band weitergeben. Danach hochladen (im Webseiten-Ordner):
 
 ```powershell
-Get-Content PlusOne_Bandbereich\data-live\accounts.json -Raw | npx wrangler secret put BAND_ACCOUNTS
+Get-Content PlusOne_Bandbereich\data-liveccounts.json -Raw | npx wrangler secret put BAND_ACCOUNTS
 ```
 
 **Songdaten oder Audio aktualisieren:**
