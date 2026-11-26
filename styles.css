@@ -381,3 +381,8 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 .placeholder {
   background: #fff4cc; border: 2px dashed var(--orange); border-radius: 12px; padding: 16px 20px;
 }
+
+/* Reiter „Intern“ (Bandbereich) */
+.nav__menu a.nav__intern { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); }
+.nav__intern svg { fill: currentColor; }
+.nav__menu a.nav__intern:hover { color: var(--ink); }
