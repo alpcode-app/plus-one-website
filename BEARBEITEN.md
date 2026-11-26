@@ -22,7 +22,7 @@ Für mehrere Dateien auf einmal: auf der Repository-Seite die Taste **`.`** drü
 
 | Was | Datei | Wo |
 |---|---|---|
-| Termine | `index.html` | Abschnitt `id="live"`: einen `<li class="gig">…</li>`-Block kopieren und Datum, Titel, Ort ändern |
+| Termine | `index.html` | Abschnitt `id="live"`: die Vorlage im Kommentar darüber kopieren, Datum/Titel/Ort anpassen. Solange es keine Termine gibt, steht dort die Karte `gig--empty` („Neue Termine folgen bald“), die beim ersten Termin entfernen |
 | Bandgeschichte / Mitglieder | `index.html` | Abschnitt `id="band"` (Zeitstrahl `<ol class="timeline">`, Namen `<ul class="members">`) |
 | Galerie | `index.html` + `assets/img/` | Bild hochladen (**Add file → Upload files**), dann einen `<button class="gallery__item">`-Block kopieren |
 | Videos ein-/ausblenden | `index.html` | `<section … id="videos" hidden>`: `hidden` entfernen = sichtbar. Dann auch den Nav-Link „Videos“ und den YouTube-Abschnitt in `datenschutz.html` wieder einblenden |
